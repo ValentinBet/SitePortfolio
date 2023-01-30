@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'barlow';
+    src: url("/assets/fonts/Barlow-Medium.ttf");
+
+}
+
+:root {
+
+    --bg-color: #f8f8f8;
+    /* TOP MENU PROPERTIES*/
+    --border-size: 0.125rem;
+    --duration: 450ms;
+    --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+    --font-family: 'barlow';
+    --color-primary: white;
+    --color-secondary: black;
+    --color-tertiary: dodgerblue;
+    --shadow: rgba(0, 0, 0, 0.1);
+    --space: 1rem;
+
+    /* FOOTER PROPERTIES*/
+    --footer-height: 4.5rem;
+}
+
+/* * {
+    background-color: var(--bg-color);
+} */
+
+body {
+    /* all: inherit; */
+    /* position: absolute; */
+   /* width: 100vw;*/
+    /* height: 100vh; */
+    background-color: var(--bg-color);
+}
+
+#ContentContainer {
+    padding-bottom: var(--footer-height);
+    overflow: auto;
+}
+
+.PreventSelect {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+/* MAIN TITLE */
+
+.TitleContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 9rem;
+    overflow: hidden;
+}
+
+#MainTitle {
+
+    font-family: 'barlow';
+    text-align: center;
+    font-size: 400%;
+    text-shadow: 3px 3px 0 rgba(59, 59, 59, 0.5);
+}
+
+/* TOP MENU */
+
+#TopMenuContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    overflow: auto;
+}
+
+#TopMenu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 50%;
+    box-shadow: var(--shadow) 4px 4px;
+}
+
+#TopMenu a {
+    text-decoration: none;
+    flex-grow: 1;
+    cursor: pointer;
+    padding: calc(var(--space)) var(--space) var(--space);
+    border: var(--border-size) solid black;
+    color: var(--color-secondary);
+    background-color: var(--bg-color);
+    font-size: 1.5rem;
+    font-family: var(--font-family);
+    text-shadow: var(--shadow) 2px 2px;
+    transition: flex-grow var(--duration) var(--ease);
+    text-align: center;
+    border-left: var(--border-size) solid black;
+    margin-left: calc(var(--border-size) * -1);
+}
+
+#TopMenu a:hover,
+#TopMenu a:focus {
+    flex-grow: 2;
+    color: rgb(255, 255, 255);
+    outline: none;
+    text-shadow: none;
+    background-color: var(--color-secondary);
+}
+
+#TopMenu a:focus {
+    outline: var(--border-size) dashed var(--color-primary);
+    outline-offset: calc(var(--border-size) * -3);
+}
+
+#TopMenu:hover a:focus:not(:hover) {
+    flex-grow: 1;
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+    outline-color: var(--color-tertiary);
+}
+
+#TopMenu a:active {
+    transform: translateY(var(--border-size));
+}
+
+/* Footer */
+
+#FooterContainer {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: var(--footer-height);
+}
+
+.Footer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 35%;
+}
+
+.Footer img {
+    cursor: pointer;
+}
+
+.Footer img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.Footer img:hover {
+    background-color: rgba(33, 29, 90, 0.192);
+    opacity: 1;
+    filter: drop-shadow(2px 2px 1px rgba(160, 160, 160, 0.363));
+    transition: .12s linear;
+    z-index: 1;
+    transform: scale(1);
+}
+
+.Footer img:not(hover) {
+    opacity: 0.7;
+    filter: alpha(opacity=40);
+    /* msie */
+    transition: .12s linear;
+    transform: scale(0.9);
+}
