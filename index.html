@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="preload" href="assets/fonts/Barlow-Medium.ttf" as="font" type="ttf">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/carousel.css">
@@ -25,39 +26,112 @@
         <div class="TitleContainer">
             <h1 id="MainTitle"> Valentin BETRANCOURT </h1>
         </div>
-    
-        <div class="MainCarousel">
+
+        <div id="PresContainer">
+            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. In dictum non consectetur a erat nam. Ut tellus elementum sagittis vitae et leo. Interdum
+                consectetur libero id faucibus. Amet mauris commodo quis imperdiet massa tincidunt. Amet venenatis urna
+                cursus
+                eget nunc. Amet risus nullam eget felis eget nunc lobortis. Ornare arcu odio ut sem nulla pharetra diam
+                sit.
+                Bibendum est ultricies integer quis auctor elit. Et malesuada fames ac turpis. Elementum curabitur vitae
+                nunc
+                sed. Blandit libero volutpat sed cras. Erat imperdiet sed euismod nisi porta. Eu facilisis sed odio
+                morbi quis
+                commodo odio aenean. Dui vivamus arcu felis bibendum. Tincidunt dui ut ornare lectus sit amet. Sed
+                pulvinar
+                proin gravida hendrerit lectus a.
+
+                Nisi quis eleifend quam adipiscing vitae. Sodales neque sodales ut etiam sit. Eget duis at tellus at
+                urna
+                condimentum mattis pellentesque. At varius vel pharetra vel turpis nunc. Purus non enim praesent
+                elementum
+                facilisis leo vel. Velit scelerisque in dictum non. Tristique magna sit amet purus. Augue eget arcu
+                dictum
+                varius duis at. Pharetra sit amet aliquam id diam. Sem nulla pharetra diam sit amet nisl suscipit
+                adipiscing
+                bibendum. Leo duis ut diam quam nulla porttitor. Enim tortor at auctor urna nunc id cursus. Augue neque
+                gravida
+                in fermentum et sollicitudin ac.</p>
+
+                <img src="assets/img/UKFLAG.jpg" alt="">
+        </div>
+
+        <hr style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));">
+
+        <div class="TitleContainer">
+            <h2 > Mon travail sur Dead Cells </h1>
+        </div>
+
+        <div class="MC">
             <ul class="picture__slider">
-                <li class="carousel__image">
-                    <img src="https://images.pexels.com/photos/302892/pexels-photo-302892.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Vanilla Carousel Javascript" />
+
+                <li class="MCImageContainer">
+                    <div class="MCSlideContent MCTextAnim">
+                        <div>
+                            <h2 class="PreventSelect"> La banque </h2>
+                        </div>
+                        <article> <b> <i> Lorem ipsum dolor sit amet</i> </b> Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore
+                            magna aliqua. In dictum non consectetur a erat nam. Ut tellus elementum sagittis vitae et
+                            leo. Interdum
+                            consectetur libero id faucibus. Amet mauris commodo quis imperdiet massa tincidunt. Amet
+                            venenatis urna
+                            cursus
+                            eget nunc. Amet risus nullam eget felis eget nunc lobortis. Ornare arcu odio ut sem nulla
+                            pharetra diam
+                            sit.
+                            Bibendum est ultricies integer quis auctor elit. Et malesuada fames ac turpis. Elementum
+                            curabitur vitae
+                            nunc
+                            sed. Blandit libero volutpat sed cras. Erat imperdiet sed euismod nisi porta. Eu facilisis
+                            sed odio
+                            morbi quis
+                            commodo odio aenean. Dui vivamus arcu felis bibendum. Tincidunt dui ut ornare lectus sit
+                            amet. Sed
+                            pulvinar
+                            proin gravida hendrerit lectus a.</article>
+                    </div>
+                    <video autoplay loop muted preload="metadata">
+                        <source src="assets/video/DCBANK.mp4" type="video/mp4">
+                    </video>
                 </li>
-                <li class="carousel__image">
-                    <img src="" data-src="https://images.pexels.com/photos/302889/pexels-photo-302889.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Vanilla Carousel Javascript" />
-                </li>
-                <li class="carousel__image">
-                    <img src="" data-src="https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="Vanilla Carousel Javascript" />
-                </li>
-                <li class="carousel__image">
-                    <img src="" data-src="https://images.pexels.com/photos/1308751/pexels-photo-1308751.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Vanilla Carousel Javascript" />
-                </li>
-                <li class="carousel__image">
-                    <img src="" data-src="https://images.pexels.com/photos/935981/pexels-photo-935981.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="Vanilla Carousel Javascript" />
+
+                <li class="MCImageContainer">
+                    <div class="MCSlideContent">
+                        <div class="MCTextAnim">
+                            <h2 class="PreventSelect"> The bank </h2>
+                        </div>
+                        <p> Test</p>
+                    </div>
+                    <img src="/assets/img/bankgif.gif" alt="Vanilla Carousel Javascript" />
                 </li>
             </ul>
-            <div class="controls">
-                <button class="btn--prev is-hidden">Prev
+
+
+            <div class="MCControls">
+                <button class="MCBtnPrev hide">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px"
+                        height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                        <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round"
+                            stroke-linejoin="round" points="
+                        45.63,75.8 0.375,38.087 45.63,0.375 " />
+                    </svg>
                 </button>
-                <button class="btn--next">Next 
+                <button class="MCBtnNext">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60px"
+                        height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                        <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round"
+                            stroke-linejoin="round" points="
+                      0.375,0.375 45.63,38.087 0.375,75.8 " />
+                    </svg>
                 </button>
             </div>
         </div>
-    
-    
+
     </div>
-
-
-
-
 
     <div id="FooterContainer">
         <section class="Footer">

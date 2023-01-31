@@ -1,17 +1,22 @@
+
+// CAROUSEL >>
+
 const trackContainer = document.querySelector('.picture__slider');
-const carouselImage = document.querySelectorAll('.carousel__image');
-const btnPrev = document.querySelector('.btn--prev');
-const btnNext = document.querySelector('.btn--next');
-let amountToMove = carouselImage[0].offsetWidth;
+const carouselImage = document.querySelectorAll('.MCImageContainer');
+const btnPrev = document.querySelector('.MCBtnPrev');
+const btnNext = document.querySelector('.MCBtnNext');
+const titles = document.querySelectorAll('.MCSlideContent');
+let amountToMove = carouselImage[1].offsetWidth;
 
 window.addEventListener('resize',() => {
-	amountToMove = carouselImage[0].offsetWidth;
+	amountToMove = carouselImage[1].offsetWidth;
 })
 
 let count = 0;
 btnNext.addEventListener('click', function() {
 	if(count >= carouselImage.length-1 ) return;
 	count++;
+
 	let imgSrc = carouselImage[count].firstElementChild;
 	if(imgSrc.getAttribute('src') === "") {
 		imgSrc.setAttribute('src',imgSrc.dataset.src);
@@ -19,10 +24,11 @@ btnNext.addEventListener('click', function() {
 	trackContainer.style.transition = "transform 0.5s ease-in-out"
 	trackContainer.style.transform = 'translateX(-' + amountToMove * count + 'px)';
 	btnShowHide(count);
+	animateCarousleTitle(count);
 });
 
 window.addEventListener('resize',() => {
-	const widthGallery = document.querySelector('.MainCarousel').offsetWidth;
+	const widthGallery = document.querySelector('.MC').offsetWidth;
 	trackContainer.style.transition = "none"
 	trackContainer.style.transform = 'translateX(-' + amountToMove * count + 'px)';
 	/*if(count === carouselImage.length-1) {
@@ -33,24 +39,38 @@ window.addEventListener('resize',() => {
 btnPrev.addEventListener('click', function() {
 	if(count === 0 ) return;
 	count--;
+	animateCarousleTitle(count);
 	trackContainer.style.transition = "transform 0.5s ease-in-out"
 	trackContainer.style.transform = 'translateX(-' + amountToMove * count + 'px)';
 	btnShowHide(count);
 });
 
+function animateCarousleTitle(count) {
+	resetTitleAnims();
+	titles[count].classList.add('MCTextAnim');
+}
+
+function resetTitleAnims() {
+	titles.forEach(t => {
+		t.classList.remove('MCTextAnim');
+	});
+}
 
 
 function btnShowHide(count) {
 	if(count === 0) {
-		btnPrev.classList.add('is-hidden');
-		btnNext.classList.remove('is-hidden');
+		btnPrev.classList.add('hide');
+		btnNext.classList.remove('hide');
 	}
 	else if(count === carouselImage.length-1) {
-		btnPrev.classList.remove('is-hidden');
-		btnNext.classList.add('is-hidden');
+		btnPrev.classList.remove('hide');
+		btnNext.classList.add('hide');
 	}
 	else {
-		btnPrev.classList.remove('is-hidden');
-		btnNext.classList.remove('is-hidden');
+		btnPrev.classList.remove('hide');
+		btnNext.classList.remove('hide');
 	}
 }
+
+
+// <<

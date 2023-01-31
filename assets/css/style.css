@@ -1,7 +1,8 @@
 @font-face {
     font-family: 'barlow';
     src: url("/assets/fonts/Barlow-Medium.ttf");
-
+    font-display: swap;
+    font-style: normal;
 }
 
 :root {
@@ -34,8 +35,11 @@ body {
     background-color: var(--bg-color);
 }
 
+img {
+    pointer-events: none;
+}
+
 #ContentContainer {
-    padding-bottom: var(--footer-height);
     overflow: auto;
 }
 
@@ -51,10 +55,8 @@ body {
 /* MAIN TITLE */
 
 .TitleContainer {
-    display: flex;
-    justify-content: center;
     width: 100%;
-    height: 9rem;
+    height: 100%;
     overflow: hidden;
 }
 
@@ -64,6 +66,16 @@ body {
     text-align: center;
     font-size: 400%;
     text-shadow: 3px 3px 0 rgba(59, 59, 59, 0.5);
+}
+
+.TitleContainer h2 {
+    font-family: 'barlow';
+    text-align: left;
+    font-size: 400%;
+    text-shadow: 3px 3px 0 rgba(59, 59, 59, 0.5);
+    margin-bottom: 2%;
+    margin-left: 3%;
+    margin-top: 2%;
 }
 
 /* TOP MENU */
@@ -126,6 +138,25 @@ body {
     transform: translateY(var(--border-size));
 }
 
+/*  Presentation Container */
+
+#PresContainer {
+    margin-top: 1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#PresContainer p {
+    width: 50%;
+    font-family: 'barlow';
+    padding-top: 1%;
+}
+
+
 /* Footer */
 
 #FooterContainer {
@@ -152,16 +183,17 @@ body {
     border-radius: 50%;
 }
 
-.Footer img:hover {
+.Footer a:hover {
     background-color: rgba(33, 29, 90, 0.192);
     opacity: 1;
     filter: drop-shadow(2px 2px 1px rgba(160, 160, 160, 0.363));
     transition: .12s linear;
     z-index: 1;
     transform: scale(1);
+    border-radius: 50%;
 }
 
-.Footer img:not(hover) {
+.Footer a:not(hover) {
     opacity: 0.7;
     filter: alpha(opacity=40);
     /* msie */
