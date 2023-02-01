@@ -12,11 +12,12 @@ ul {
 	margin-bottom: 0
 }
 .MC {
-    margin: 20px auto;
     max-width: 100%;
   	height: 45rem;
-  	overflow: hidden;
+    overflow-x: hidden;
   	position: relative;
+    box-shadow: 0 0 80px 15px black;
+    z-index: -1;
 }
 
 .picture__slider {
@@ -90,7 +91,7 @@ ul {
   width: 35vw;
   height: 40vh;
   padding: 3% 5%;
-  border-radius: 2%;
+  border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(50px) saturate(120%);
   border: 1px solid white;

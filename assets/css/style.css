@@ -40,7 +40,7 @@ img {
 }
 
 #ContentContainer {
-    overflow: auto;
+   margin-bottom: 2.5vh;
 }
 
 .PreventSelect {
@@ -61,25 +61,42 @@ img {
 }
 
 #MainTitle {
-
     font-family: 'barlow';
     text-align: center;
     font-size: 400%;
-    text-shadow: 3px 3px 0 rgba(59, 59, 59, 0.5);
+    text-shadow: 2px 2px 0 rgba(59, 59, 59, 0.5);
 }
 
-.TitleContainer h2 {
-    font-family: 'barlow';
-    text-align: left;
-    font-size: 400%;
-    text-shadow: 3px 3px 0 rgba(59, 59, 59, 0.5);
+.TitleContainer img {
     margin-bottom: 2%;
     margin-left: 3%;
     margin-top: 2%;
+    z-index: 1;
+}
+
+/* IMAGE SECONDARY TITLE */ 
+
+.ImgTitleContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ImgTitleContainer img {
+    margin-bottom: 1.5%;
+    margin-left: 5%;
+    margin-top: 1.5%;
 }
 
 /* TOP MENU */
 
+#NameLogo {
+    font-family: 'barlow';
+    text-align: left;
+    position: absolute;
+    margin-top: 1%;
+    margin-Left: 1%;
+}
 #TopMenuContainer {
     width: 100%;
     display: flex;
@@ -142,8 +159,8 @@ img {
 
 #PresContainer {
     margin-top: 1%;
-    margin-left: 3%;
-    margin-right: 3%;
+    margin-left: 15%;
+    margin-right: 5%;
     margin-bottom: 2%;
     display: flex;
     justify-content: space-between;
@@ -156,6 +173,22 @@ img {
     padding-top: 1%;
 }
 
+#PPBorder  {
+    border-radius: 4px;
+    display: block;
+    width: 25%;
+    height: auto;
+}
+#PresContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    width: auto;
+    height: auto;
+    border-radius: 3%;
+    border: 1px solid rgba(0, 0, 0, 0.185);
+    padding: 5px;
+}
 
 /* Footer */
 
@@ -170,15 +203,18 @@ img {
 .Footer {
     display: flex;
     justify-content: space-evenly;
-    width: 35%;
+    width: 40%;
+    height: 100%;
 }
 
 .Footer img {
     cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
-.Footer img {
-    width: 100%;
+.Footer a {
+    width: 10%;
     height: 100%;
     border-radius: 50%;
 }
