@@ -6,10 +6,10 @@ const carouselImage = document.querySelectorAll('.MCImageContainer');
 const btnPrev = document.querySelector('.MCBtnPrev');
 const btnNext = document.querySelector('.MCBtnNext');
 const titles = document.querySelectorAll('.MCSlideContent');
-let amountToMove = carouselImage[1].offsetWidth;
+let amountToMove = carouselImage[0].offsetWidth;
 
 window.addEventListener('resize',() => {
-	amountToMove = carouselImage[1].offsetWidth;
+	amountToMove = carouselImage[0].offsetWidth;
 })
 
 let count = 0;
@@ -17,14 +17,11 @@ btnNext.addEventListener('click', function() {
 	if(count >= carouselImage.length-1 ) return;
 	count++;
 
-	let imgSrc = carouselImage[count].firstElementChild;
-	if(imgSrc.getAttribute('src') === "") {
-		imgSrc.setAttribute('src',imgSrc.dataset.src);
-	}
 	trackContainer.style.transition = "transform 0.5s ease-in-out"
 	trackContainer.style.transform = 'translateX(-' + amountToMove * count + 'px)';
 	btnShowHide(count);
 	animateCarousleTitle(count);
+	startVideo(count);
 });
 
 window.addEventListener('resize',() => {
@@ -43,7 +40,12 @@ btnPrev.addEventListener('click', function() {
 	trackContainer.style.transition = "transform 0.5s ease-in-out"
 	trackContainer.style.transform = 'translateX(-' + amountToMove * count + 'px)';
 	btnShowHide(count);
+	startVideo(count);
 });
+
+function startVideo(count) {
+	trackContainer.children[count].lastElementChild.play();
+}
 
 function animateCarousleTitle(count) {
 	resetTitleAnims();

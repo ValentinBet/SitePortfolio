@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+<!-- https://coolors.co/d3341b-595457-edf2f4-f7cb15-5e2bff -->
 <head>
-    <link rel="preload" href="assets/fonts/Barlow-Medium.ttf" as="font" type="ttf">
+    <link rel="preload" href="assets/fonts/Barlow-Medium.ttf" as="font" type="font/ttf">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/carousel.css">
@@ -12,18 +14,18 @@
 </head>
 
 <body>
-    <div id="TopMenuContainer">
+    <Header id="TopMenuContainer">
         <nav id="TopMenu">
             <a class="PreventSelect" href="/cv">Mon CV</a>
             <a class="PreventSelect" href="/projet">Mes Projets</a>
             <a class="PreventSelect" href="/contact">Contact</a>
         </nav>
-    </div>
+    </Header>
 
 
-    <div id="ContentContainer">
+    <main id="ContentContainer">
         <div class="TitleContainer">
-            <h1 id="MainTitle"> <i>Valentin BETRANCOURT </i></h1>
+            <h1 id="MainTitle"> Valentin BETRANCOURT</h1>
         </div>
 
         <div id="PresContainer">
@@ -31,7 +33,8 @@
                 <img src="assets/img/PP.jpg" alt="">
             </div>
 
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            <p id="PresContainerMainText"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et
                 dolore
                 magna aliqua. In dictum non consectetur a erat nam. Ut tellus elementum sagittis vitae et leo. Interdum
                 consectetur libero id faucibus. Amet mauris commodo quis imperdiet massa tincidunt. Amet venenatis urna
@@ -45,7 +48,7 @@
                 commodo odio aenean. Dui vivamus arcu felis bibendum. Tincidunt dui ut ornare lectus sit amet. Sed
                 pulvinar
                 proin gravida hendrerit lectus a.
-
+                <br></br>
                 Nisi quis eleifend quam adipiscing vitae. Sodales neque sodales ut etiam sit. Eget duis at tellus at
                 urna
                 condimentum mattis pellentesque. At varius vel pharetra vel turpis nunc. Purus non enim praesent
@@ -56,20 +59,72 @@
                 adipiscing
                 bibendum. Leo duis ut diam quam nulla porttitor. Enim tortor at auctor urna nunc id cursus. Augue neque
                 gravida
-                in fermentum et sollicitudin ac.</p>
+                in fermentum et sollicitudin ac.
+            </p>
 
 
         </div>
 
         <hr
             style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));">
+        
+        <div id="CompContainer">
+
+            <img src="/assets/img/HaxeLogo.png" width="5%">
+            <img src="/assets/img/UnityLogo.png" width="5%">
+            <img src="/assets/img/UnityOnlineLogo.png" width="5%">
+            <img src="/assets/img/CSharpLogo.png" width="5%">
+
+        </div>
+        
+        
+            <hr
+            style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));">
 
         <div class="ImgTitleContainer">
-            <img class="PreventSelect" src="/assets/img/DCLOGO (resize).png" alt="Vanilla Carousel Javascript" />
+            <img class="PreventSelect" src="/assets/img/DCLOGO (resize).png" alt="" />
         </div>
 
         <div class="MC">
             <ul class="picture__slider">
+                <li class="MCImageContainer">
+                    <div class="MCSlideContent MCTextAnim">
+                        <div class="MCSlideContentTitle">
+                            <h2 class="PreventSelect"> DLC Castlevania </h2>
+                        </div>
+                        <div class="MCSlideContentArticle">
+                            <article> <b> <i> Lorem ipsum dolor sit amet</i> </b> Lorem ipsum dolor sit amet,
+                                consectetur
+                                adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                                dolore
+                                magna aliqua. In dictum non consectetur a erat nam. Ut tellus elementum sagittis vitae
+                                et
+                                leo. Interdum
+                                consectetur libero id faucibus. Amet mauris commodo quis imperdiet massa tincidunt. Amet
+                                venenatis urna
+                                cursus
+                                eget nunc. Amet risus nullam eget felis eget nunc lobortis. Ornare arcu odio ut sem
+                                nulla
+                                pharetra diam
+                                sit.
+                                Bibendum est ultricies integer quis auctor elit. Et malesuada fames ac turpis. Elementum
+                                curabitur vitae
+                                nunc
+                                sed. Blandit libero volutpat sed cras. Erat imperdiet sed euismod nisi porta. Eu
+                                facilisis
+                                sed odio
+                                morbi quis
+                                commodo odio aenean. Dui vivamus arcu felis bibendum. Tincidunt dui ut ornare lectus sit
+                                amet. Sed
+                                pulvinar
+                                proin gravida hendrerit lectus a.</article>
+                        </div>
+
+                    </div>
+                    <video oncontextmenu="return false;" disablePictureInPicture autoplay loop muted preload="metadata">
+                        <source src="assets/video/DCCV.mp4" type="video/mp4">
+                    </video>
+                </li>
 
                 <li class="MCImageContainer">
                     <div class="MCSlideContent MCTextAnim">
@@ -105,20 +160,12 @@
                         </div>
 
                     </div>
-                    <video autoplay loop muted preload="metadata">
+                    <video oncontextmenu="return false;" loop muted preload="metadata" poster="/assets/img/The_Bank.png">
                         <source src="assets/video/DCBANK.mp4" type="video/mp4">
                     </video>
                 </li>
 
-                <li class="MCImageContainer">
-                    <div class="MCSlideContent">
-                        <div class="MCTextAnim">
-                            <h2 class="PreventSelect"> The bank </h2>
-                        </div>
-                        <p> Test</p>
-                    </div>
-                    <img src="/assets/img/bankgif.gif" alt="Vanilla Carousel Javascript" />
-                </li>
+
             </ul>
 
 
@@ -142,7 +189,7 @@
             </div>
         </div>
 
-    </div>
+    </main>
 
     <div id="FooterContainer">
         <section class="Footer">

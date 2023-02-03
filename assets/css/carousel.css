@@ -152,7 +152,7 @@ ul {
   100%{transform:translateY(0px); }
 }
 
-@media screen and (min-width : 321px) {
+@media screen and (max-width : 321px) {
 	.MC{
 		float: none;
 		width: 100%
