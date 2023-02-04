@@ -206,7 +206,23 @@ img {
     flex-wrap: wrap;
     align-content: center;
 }
+.CompSubContainer {
+    width: 20%;
+    flex-direction: column;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    row-gap: 20px;
+}
+.CompSubContainer img {
+    width: 20%;
+    
+}
 
+.CompSubContainer p {
+    text-align: center;
+    font-family: 'barlow';
+}
 
 /* Footer */
 
