@@ -20,8 +20,8 @@ btnNext.addEventListener('click', function() {
 	trackContainer.style.transition = "transform 0.5s ease-in-out"
 	trackContainer.style.transform = 'translateX(-' + amountToMove * count + 'px)';
 	btnShowHide(count);
-	animateCarousleTitle(count);
 	startVideo(count);
+	animateCarousleTitle(count);
 });
 
 window.addEventListener('resize',() => {
@@ -50,6 +50,7 @@ function startVideo(count) {
 function animateCarousleTitle(count) {
 	resetTitleAnims();
 	titles[count].classList.add('MCTextAnim');
+	console.log(count);
 }
 
 function resetTitleAnims() {
