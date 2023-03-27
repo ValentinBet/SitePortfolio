@@ -15,7 +15,7 @@ li {
 ul {
 	margin-bottom: 0
 }
-.MC {
+ #MC {
     max-width: 100%;
   	height: 45rem;
     overflow-x: hidden;
@@ -43,11 +43,16 @@ ul {
 	background-color: #ebeced;
 }
 
-.MCControls .MCBtnNext {
+.MCControls svg {
+  width:60px;
+  height:80px;
+}
+
+.MCControls  .MCBtnNext,
+.MCControls .MCBtnPrev {
   margin-top: 0;
   padding:10px;	
   position: absolute;
-  right: 0px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
@@ -57,19 +62,11 @@ ul {
   color: #fbf9f9;
   font-size: 24px;
 }
+.MCControls .MCBtnNext {
+  right: 0px;
+}
 .MCControls .MCBtnPrev {
-  margin-top: 0;
-  padding:10px;
-  position: absolute;
   left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  color: #fbf9f9;
-  font-size: 24px;
 }
 
 .hide {
@@ -85,8 +82,6 @@ ul {
   width: 100%;
 }
 
-.MCSlideContentTitle {
-}
 .MCSlideContent h2 {
   text-transform: uppercase;
   font-size: 12vh;
@@ -99,12 +94,17 @@ ul {
   padding: 1% 1%;
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(50px) saturate(120%);
+  backdrop-filter: blur(45px);
   border: 1px solid white;
 }
 
-.MCSlideContent article {
-  font-size: 1vw;
+.MCSlideContent p {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+.MCSlideContentArticle :nth-child(1),
+.MCSlideContentArticle :nth-child(2) {
+  margin-bottom: 15px;
 }
 
 .MCTextAnim {
@@ -135,6 +135,18 @@ ul {
   transition: all 250ms ease-in-out;
 }
 
+
+.removeLink {
+   text-decoration: none; 
+   color: #E4FEFF;
+  }
+
+  .removeLink :hover{
+    color: #f3f3f3;
+    scale: 1.01;
+    transition: .2s linear;
+   }
+
 @keyframes animateArrowRight {
   0%{transform:translateX(-3px); stroke-width: 1.5;}
   50%{transform:translateX(3px); stroke-width: 2.5;}
@@ -152,22 +164,33 @@ ul {
   100%{transform:translateY(0px); }
 }
 
-@media screen and (max-width : 321px) {
-	.MC{
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+  .MCSlideContent .MCSlideContentArticle {
+    width: 35% !important;
+  }
+}
+@media screen and (max-width: 768px)  {
+	#MC{
 		float: none;
-		width: 100%
-	}
-	.MC {
-		min-height: 300px;
+		width: 100%;
+    box-shadow: 0 0 60px 10px rgba(0, 0, 0, 0.555);
+    min-height: 300px;
 		max-height: 300px
 	}
-	.MC img {
+  
+	#MC img {
 		height: 300px
 	}
 	.MCControls .MCBtnNext,
 	.MCControls .MCBtnPrev{
-		background: #7b666663 !important;
+		background: #7b666648 !important;
+
 	}
+  
+.MCControls svg {
+  width:20px;
+  height:40px;
+}
 
   .MCSlideContent {
     position: absolute;
@@ -184,14 +207,21 @@ ul {
     font-size: 8vw;
   }
   
-  .MCSlideContentArticle {
-    font-size: 2vw;
-    margin-top: 1%;
-    padding : 0;
+  .MCSlideContent .MCSlideContentArticle {
+    width: 37% !important;
+    margin-top: 0.5%;
+    padding: 0.5% 0.5%;
+    margin-left: 3.5%;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(50px) saturate(120%);
+    backdrop-filter: blur(45px);
     border: 1px solid white;
+  }
+
+  .MCSlideContent p {
+    font-size: 0.75rem;
+    line-height: 1;
+    
   }
   
 }
