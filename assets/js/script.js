@@ -91,10 +91,9 @@ function btnShowHide(count) {
 	}
 }
 
+
 // Function to update the language of the page
 function updateLanguage() {
-
-
 	// Loop through each element with the class "lang"
 	const langElements = document.querySelectorAll('.lang');
 	langElements.forEach((element) => {
@@ -103,37 +102,45 @@ function updateLanguage() {
 		element.textContent = arrLang[lang][key];
 	});
 }
-
-// Update the language on page load
-document.addEventListener('DOMContentLoaded', () => {
-	updateLanguage();
-});
-
 function setLanguage(language) {
 	lang = language;
 
 	const langButtons = document.querySelectorAll('.langButton');
-	const button = document.getElementById('button_'+lang);
-	
+
 	langButtons.forEach((element) => {
 		// Update the text of the element with the translation
-		if(element.getAttribute('id') != "button_"+lang) {
+		if (element.getAttribute('id') != "button_" + lang) {
 			element.classList.remove('hide');
 		} else {
 			element.classList.add('hide');
 		}
 
+		// lock button <a> for 0.3s to prevent double click
+		element.classList.add('disabled');
+		setTimeout(function () {
+			element.classList.remove('disabled');
+		}, 100);
 	});
 
-	updateLanguage();	
+	updateLanguage();
 }
 
-// function parallax() {
-// 	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-// 	var background = document.querySelector('.background');
-// 	background.style.backgroundPositionY = -scrollTop + 'px';
-// }
-// window.addEventListener('scroll', parallax);
+function readJsonFile(filePath) {
+
+	// Get the json file
+	fetch(filePath)
+		.then((response) => {
+			// Return the json file
+			return response.json();
+		})
+		.then((data) => {
+			// Set the json data to the array
+			arrLang = data;
+			// Update the language on the page
+			updateLanguage();
+		});
+}
+
 
 // Ajouter des écouteurs d'événements pour le redimensionnement et le clic sur les boutons "précédent" et "suivant"
 window.addEventListener('resize', handleResize);
@@ -144,26 +151,12 @@ btnPrev.addEventListener('click', handleClickPrev);
 window.addEventListener('scroll', handleVisibilityCheck);
 window.addEventListener('resize', handleVisibilityCheck);
 
+// OnPageLoad get lang json
+window.addEventListener('DOMContentLoaded', function () {
+	readJsonFile('assets/lang.json');
+});
 
 document.body.classList.add("loading");
 window.addEventListener("load", function () {
   document.body.classList.remove("loading");
 });
-
-var arrLang = {
-	"en-GB": {
-		"HELLO": "Hello !",
-	},
-	"fr-FR": {
-		"HELLO": "Bonjour !",
-		"PRES_1": "Je suis diplômé de Rubika Valenciennes et actuellement programmeur gameplay sur "+ 
-		"Dead Cells sur Bordeaux à Evil Empire.",
-		"PRES_2": "Mon expertise se situe dans la conception de jeux en réseau, mais je suis particulièrement "+  
-		"attiré par le gameplay et c'est sur Dead Cells que j'ai pu mettre en pratique mes compétences dans "+ 
-		"ce domaine.",
-		"PRES_3": "J'aime donner de l'impact à chaque coup d'épée, itérer sur des idées et surtout m'assurer que chaque "+
-		"partie est plus amusante que la précédente. Vous pourrez trouver sur ce portfolio des exemples de mon "+
-		"travail et de mes réalisations, ainsi que des informations sur mon parcours professionnel.",
-		"PRES_4": " Bonne visite de mon portfolio ! "
-	}
-};

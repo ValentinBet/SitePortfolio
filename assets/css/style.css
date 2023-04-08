@@ -190,6 +190,9 @@ img {
     transition: all 0.05s ease-in;
 }
 
+.disabled {
+    pointer-events: none;
+}
 /*  Presentation Container */
 
 #PresContainer {
