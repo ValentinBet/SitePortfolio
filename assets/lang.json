@@ -1,7 +1,6 @@
 {
     "en-GB": {
         "MENU_1": "My CV",
-        "MENU_2": "My Projects",
         "MENU_3": "Contact",
         "HELLO": "Hello!",
         "PRES_1": "I graduated from Rubika Valenciennes and currently work as a gameplay programmer on Dead Cells at Evil Empire in Bordeaux.",
@@ -34,8 +33,8 @@
         "MC_QATS_PRES_1": "One of my first tasks was to contribute to the creation of the Queen and the Sea DLC, specifically designing the second biome called \"The Lighthouse\".",
         "MC_QATS_PRES_2": "In this level, players must fight against three bosses at once while climbing a burning lighthouse. I had to develop the three bosses capable of fighting both alone and together, making sure they would be both fun to fight and challenging for players.",
         "MC_QATS_PRES_3": "I also had to create the procedural generation and level design of the level.",
-        "MC_END_TITLE": "See more!",
-        "MC_END_PRES_1": "I'm not going to put everything here! Click here to see more of my work on Dead Cells!"
+        "MC_END_TITLE": "And more !",
+        "MC_END_PRES_1": "A lot of update and content ! click here to see more "
     },
     "fr-FR": {
         "MENU_1": "Mon CV",
@@ -72,7 +71,7 @@
         "MC_QATS_PRES_1": "L'une de mes premières tâches a été de contribuer à la création du DLC Queen and the Sea, en particulier la conception du deuxième biome appelé \"Le Phare\".",
         "MC_QATS_PRES_2": "Dans ce niveau, les joueurs doivent affronter trois boss en même temps tout en escaladant un phare en feu. Jai dû développer les trois boss capable de combattre à la fois seul mais aussi en cohésion en m'assurant qu'ils seraient à la fois amusants à combattre mais surtout challengant pour les joueurs.",
         "MC_QATS_PRES_3": "J'ai du aussi réaliser l'affichage procédural et le level design du niveau",
-        "MC_END_TITLE": "En voir plus !",
+        "MC_END_TITLE": "Et plus encore !",
         "MC_END_PRES_1": "Je n'allais pas tout mettre ici ! Cliquez ici pour en voir plus sur mon travail pour Dead Cells !"
     }
 }
