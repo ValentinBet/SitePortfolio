@@ -1,0 +1,146 @@
+#ProjectList {
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+hr {
+    background: var(--color-4-transparent);
+    position: relative;
+    width: 50%;
+    border-top: 10px solid var(--color-4-transparent);
+}
+
+#ProjectInf {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    font-family: 'barlow';
+    transition: .12s linear;
+}
+
+#ProjectInf h1 {
+    margin-left: -5%;
+    font-size: 80px;
+    font-weight: bold;
+    font-family: 'barlow';
+    margin-bottom: 50px;
+}
+
+#ProjectInf h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'barlow';
+    margin-bottom: 10px;
+}
+
+#ProjectInf p {
+    font-size: 18px;
+    font-family: 'barlow';
+    margin-top: 0px;
+}
+
+#ProjectInf a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'barlow';
+    margin-top: 0px;
+    padding: 2px;
+}
+
+#ProjectInf a {
+    background:
+            linear-gradient(to right,
+                    var(--color-4-transparent),
+                    var(--color-4-transparent)),
+                linear-gradient(to right,
+                    var(--color-4),
+                    var(--color-4));
+        background-size: 100% 3px, 0 3px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 150ms;
+    }
+
+#ProjectInf a:hover {
+    background-size: 0 3px, 100% 3px;
+}
+
+.projectButton {
+    background-color: #1a1a1a;
+    border: 1px solid #f5f5f5;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.projectButton p {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: 'barlow';
+    color: #ffffff;
+    text-shadow: none;
+}
+
+.projectButton:hover,
+.projectButton:focus {
+    background-color: #000000;
+    border: 3px solid var(--color-4-transparent);
+
+}
+
+.projectButton:hover>p,
+.projectButton:focus>p {
+    animation: text-shadow 0.2s ease-in-out 1 forwards;
+}
+
+.projectButton:not(:hover)>p {
+    animation: unhover-text-shadow 0.2s ease-in-out 1 forwards;
+}
+
+.ImgTitleContainer {
+    margin-top: 2%;
+    background: linear-gradient(to left, white, #ececec);
+    outline: var(--color-4-transparent) solid 2px;
+}
+
+.ImgTitleContainer img {
+    filter: drop-shadow(-4px 4px 0px var(--color-4-transparent));
+}
+
+@keyframes text-shadow {
+    0% {
+        text-shadow: none;
+    }
+
+    100% {
+        text-shadow:
+            0.05em -0.05em 0 #D3341B,
+            0.10em -0.10em 0 #461109,
+            0.15em -0.15em 0 #180502;
+    }
+}
+
+@keyframes unhover-text-shadow {
+    0% {
+        text-shadow:
+            0.05em -0.05em 0 #D3341B,
+            0.10em -0.10em 0 #461109,
+            0.15em -0.15em 0 #180502;
+    }
+
+    100% {
+        text-shadow: none;
+    }
+}

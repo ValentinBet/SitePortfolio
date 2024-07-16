@@ -8,8 +8,8 @@ let amountToMove = carouselImage[0].offsetWidth;
 
 let count = 0;
 
-// base lang is FR
-let lang = 'fr-FR';
+const BASE_LANG = 'en-GB';
+let currentLang = BASE_LANG;
 
 function handleResize() {
 	amountToMove = carouselImage[0].offsetWidth;
@@ -99,17 +99,21 @@ function updateLanguage() {
 	langElements.forEach((element) => {
 		// Update the text of the element with the translation
 		const key = element.getAttribute('key');
-		element.textContent = arrLang[lang][key];
+		element.textContent = arrLang[currentLang][key];
 	});
 }
 function setLanguage(language) {
-	lang = language;
+	currentLang = language;
+
+	const urlParams = new URLSearchParams(window.location.search);
+	urlParams.set('lang', currentLang);
+	history.replaceState({}, null, window.location.origin + window.location.pathname + "?" + urlParams.toString());
 
 	const langButtons = document.querySelectorAll('.langButton');
 
 	langButtons.forEach((element) => {
 		// Update the text of the element with the translation
-		if (element.getAttribute('id') != "button_" + lang) {
+		if (element.getAttribute('id') != "button_" +  currentLang) {
 			element.classList.remove('hide');
 		} else {
 			element.classList.add('hide');
@@ -141,6 +145,11 @@ function readJsonFile(filePath) {
 		});
 }
 
+function loadLang() {
+	const urlParams = new URLSearchParams(window.location.search);
+	if (urlParams.has('lang'))
+		currentLang = urlParams.get('lang');
+}
 
 // Ajouter des écouteurs d'événements pour le redimensionnement et le clic sur les boutons "précédent" et "suivant"
 window.addEventListener('resize', handleResize);
@@ -153,6 +162,7 @@ window.addEventListener('resize', handleVisibilityCheck);
 
 // OnPageLoad get lang json
 window.addEventListener('DOMContentLoaded', function () {
+	loadLang();
 	readJsonFile('assets/lang.json');
 });
 

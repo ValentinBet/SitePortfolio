@@ -1,3 +1,9 @@
+/* * {
+background-color: rgba(255,0,0,0.1);
+border: 1px solid rgba(255,0,0,0.5)
+} */
+
+
 @font-face {
     font-family: 'barlow';
     src: url("/assets/fonts/Barlow-Medium.ttf");
@@ -36,16 +42,18 @@
     --footer-height: 4.25rem;
 }
 
-/* * {
-    background-color: var(--bg-color);
-} */
+a {
+    text-decoration: none;
+    color: #E4FEFF;
+}
 
+a :hover {
+    color: #f3f3f3;
+    scale: 1.01;
+    transition: .2s linear;
+}
 
 body {
-    /* all: inherit; */
-    /* position: absolute; */
-    /* width: 100vw;*/
-    /* height: 100vh; */
     background-color: var(--bg-color);
 }
 
@@ -62,19 +70,7 @@ img {
     user-select: none;
     /* Standard syntax */
 }
-/* 
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
 
-    min-height :100%;
-    z-index: -1;
-    overflow: hidden;
-    background-image: url('../img/background.jpg');
-    background-size: cover;
-} */
 /* MAIN TITLE */
 
 .TitleContainer {
@@ -193,6 +189,7 @@ img {
 .disabled {
     pointer-events: none;
 }
+
 /*  Presentation Container */
 
 #PresContainer {
@@ -280,20 +277,23 @@ img {
 .CompSubContainer img:hover,
 .CompSubContainer p:hover,
 .CompSubContainer img:hover~p {
-    transform: scale(1.08);
-    transition: all 0.3s ease;
+    transform: scale(1.15) translateZ(0);
+    transition: all .15s ease;
+    
 }
 
 .CompSubContainer img:not(hover),
 .CompSubContainer p:not(hover),
 .CompSubContainer img:not(hover)~p {
-    transition: all 0.3s ease;
+    transition: all 0.15s ease;
 }
 
 .CompSubContainer p {
     text-align: center;
     font-family: 'barlow';
     font-size: 1.2rem;
+    backface-visibility: hidden;
+
 }
 
 /* Footer */
@@ -485,4 +485,5 @@ img {
         height: 100%;
         border-radius: 50%;
     }
+
 }

@@ -135,18 +135,6 @@ ul {
   transition: all 250ms ease-in-out;
 }
 
-
-.removeLink {
-   text-decoration: none; 
-   color: #E4FEFF;
-  }
-
-  .removeLink :hover{
-    color: #f3f3f3;
-    scale: 1.01;
-    transition: .2s linear;
-   }
-
 @keyframes animateArrowRight {
   0%{transform:translateX(-3px); stroke-width: 1.5;}
   50%{transform:translateX(3px); stroke-width: 2.5;}
