@@ -69,10 +69,6 @@ ul {
   left: 0px;
 }
 
-.hide {
-	display: none;
-}
-
 .MCSlideContent {
   position: absolute;
   font-family: 'barlow';
@@ -135,6 +131,33 @@ ul {
   transition: all 250ms ease-in-out;
 }
 
+.MCSlideContentTitle a {
+  display: inline-block;
+  transition: .2s ease;
+
+}
+
+.AnimatedMCSlideContentTitle {
+  animation: MCSlideContentTitleIdle 2s linear infinite;
+}
+
+.MCSlideContentTitle a:hover {
+  scale: 1.15;
+  transition: .2s ease;
+}
+
+@keyframes MCSlideContentTitleIdle {
+  0% {
+      transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-8%);
+}
+  100% {
+      transform: translateY(0%);
+  }
+}
+  
 @keyframes animateArrowRight {
   0%{transform:translateX(-3px); stroke-width: 1.5;}
   50%{transform:translateX(3px); stroke-width: 2.5;}

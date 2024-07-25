@@ -6,37 +6,42 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" />
     <link rel="preload" href="assets/fonts/Barlow-Medium.ttf" as="font" type="font/ttf">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/carousel.css">
+    <link rel="stylesheet" href="/assets/css/project.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description"
         content="Page d'accueil portfolio de Betrancourt Valentin gameplay programmer sur Dead Cells">
-    <link rel="alternate" hreflang="en" href="/en/index_en.html">
     <title>Valentin Betrancourt</title>
 </head>
 
 <body>
-    <!-- <section class="background"></section> -->
-
-    <Header id="TopMenuContainer">
-
-        <nav id="TopMenu">
-            <a class="PreventSelect" href="/fr/cv.html">Mon CV</a>
-            <a class="PreventSelect" href="/index.html"> <b>Acceuil</b></a>
-            <a class="PreventSelect" href="#contact">Contact</a>
-        </nav>
-        <div id="topMenuIcon"> <a href="https://www.linkedin.com/in/valentin-betrancourt/" class="SMListIcons">
-                <img src="/assets/img/logo/logo-linkedin.png" width="90%" class="PreventSelect"></img></a>
-            <a href="/en/index_en.html" class="SMListIcons">
-                <img src="/assets/img/logo/ukUS.png" width="100%" class="PreventSelect"></img></a>
-        </div>
-
-    </Header>
+    <script src="/assets/js/lib/jquery-3.6.4.min.js"></script>
+    <script src="/assets/js/lib/showdown.min.js"></script>
+    <script src="/assets/js/project.js"></script>
+    
+    <div id="menu-container"></div>
 
     <main id="ContentContainer">
+      
+        <div class="ImgTitleContainer">
+            <img class="PreventSelect" src="/assets/img/logo/DCLOGO (resize).png" alt="" />
+        </div>
+        
+        <!-- MD Generated  >> -->
+        <div id="projectContainer">
+            <nav id="ProjectList">
+                <ul id="ProjectListTarget">
+                </ul>
+            </nav>
+        
+            <div id="ProjectInf">
+            </div>
+        </div>
+        <!-- << MD Generated  -->
     </main>
 
     <div id="FooterContainer">

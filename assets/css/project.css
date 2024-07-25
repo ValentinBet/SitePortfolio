@@ -1,30 +1,76 @@
+
+
+
+#projectContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    column-gap: 5%;
+    margin-left: 5%;
+}
 #ProjectList {
-    margin-left: 7%;
-    margin-right: 7%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: 1%;
+    width: 20%;
+    justify-content: flex-start;
+    border: #0000002d solid 1px;
 }
 
-hr {
+#ProjectList hr {
     background: var(--color-4-transparent);
-    position: relative;
     width: 50%;
     border-top: 10px solid var(--color-4-transparent);
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#ProjectList ul {
+    white-space: nowrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+}
+
+#ProjectList li a p {
+    margin: 0;
+    padding: 5% 0 5% 0;
+}
+#ProjectList li a {
+    display: block;
+    color: #000;
+    padding-left: 20px;
+    font-family: 'barlow';
+
+}
+#ProjectList li a.active {
+    background-color: #D3341B;
+    color: white;
+}
+
+#ProjectList li a:hover:not(.active) {
+    color: white;
+    background-color: #D3341B;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    font-weight: bold;
 }
 
 #ProjectInf {
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-right: 10%;
+    flex-grow: 0;
+    flex-shrink: 0;
     margin-top: 2%;
     margin-bottom: 4%;
     font-family: 'barlow';
     transition: .12s linear;
+    width: 70%;
 }
 
 #ProjectInf h1 {
-    margin-left: -5%;
+    margin-left: -1%;
     font-size: 80px;
     font-weight: bold;
     font-family: 'barlow';
@@ -38,13 +84,20 @@ hr {
     margin-bottom: 10px;
 }
 
-#ProjectInf p {
+#ProjectInf .text {
     font-size: 18px;
     font-family: 'barlow';
     margin-top: 0px;
 }
 
-#ProjectInf a {
+.youtube-link {
+    display: inline-block;
+}
+.youtube-link img{
+    width: 560px;
+}
+
+.external-link {
     color: inherit;
     text-decoration: none;
     font-size: 15px;
@@ -53,7 +106,7 @@ hr {
     padding: 2px;
 }
 
-#ProjectInf a {
+.external-link {
     background:
             linear-gradient(to right,
                     var(--color-4-transparent),
@@ -67,80 +120,78 @@ hr {
         transition: background-size 150ms;
     }
 
-#ProjectInf a:hover {
+.external-link:hover {
     background-size: 0 3px, 100% 3px;
-}
-
-.projectButton {
-    background-color: #1a1a1a;
-    border: 1px solid #f5f5f5;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    width: 300px;
-    height: 300px;
-    text-align: center;
-    display: inline-block;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-}
-
-.projectButton p {
-    font-size: 45px;
-    font-weight: bold;
-    font-family: 'barlow';
-    color: #ffffff;
-    text-shadow: none;
-}
-
-.projectButton:hover,
-.projectButton:focus {
-    background-color: #000000;
-    border: 3px solid var(--color-4-transparent);
-
-}
-
-.projectButton:hover>p,
-.projectButton:focus>p {
-    animation: text-shadow 0.2s ease-in-out 1 forwards;
-}
-
-.projectButton:not(:hover)>p {
-    animation: unhover-text-shadow 0.2s ease-in-out 1 forwards;
 }
 
 .ImgTitleContainer {
     margin-top: 2%;
+    /* outline: var(--color-4-transparent) solid 2px; */
     background: linear-gradient(to left, white, #ececec);
-    outline: var(--color-4-transparent) solid 2px;
+    box-shadow: 0 2px 0  var(--color-4-transparent);
 }
 
 .ImgTitleContainer img {
     filter: drop-shadow(-4px 4px 0px var(--color-4-transparent));
 }
 
-@keyframes text-shadow {
-    0% {
-        text-shadow: none;
-    }
-
-    100% {
-        text-shadow:
-            0.05em -0.05em 0 #D3341B,
-            0.10em -0.10em 0 #461109,
-            0.15em -0.15em 0 #180502;
+@media (max-width: 1700px) {
+    #ProjectList {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
-@keyframes unhover-text-shadow {
-    0% {
-        text-shadow:
-            0.05em -0.05em 0 #D3341B,
-            0.10em -0.10em 0 #461109,
-            0.15em -0.15em 0 #180502;
+@media (max-width: 1300px) {
+    #ProjectList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    #ProjectList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    #ProjectList {
+        grid-template-columns: auto;
+    }
+    
+    #ProjectInf {
+        margin-left: 5%;
+        margin-right: 5%;
     }
 
-    100% {
-        text-shadow: none;
+    #ProjectInf h1 {
+        margin-left: -2%;
+    }
+
+    .youtube-link {
+        display: block;
+    }
+
+    .youtube-link img{
+        width: 100%;
+    }
+
+    .youtube-link iframe{
+        width: 100%;
+    }
+
+    .projectButton {
+    
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+
+    }
+
+    .projectButton p {
+        font-size: 20px;
+        margin: 0;
+        padding: 0;
     }
 }

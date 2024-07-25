@@ -47,12 +47,6 @@ a {
     color: #E4FEFF;
 }
 
-a :hover {
-    color: #f3f3f3;
-    scale: 1.01;
-    transition: .2s linear;
-}
-
 body {
     background-color: var(--bg-color);
 }
@@ -102,7 +96,20 @@ img {
     margin-bottom: 1.5%;
     margin-left: 5%;
     margin-top: 1.5%;
+    transition: transform 1s ease;
 }
+
+.ImgTitleContainer a {
+    display: inline-block;
+    text-decoration: none; 
+    width: 100%;
+}
+
+.ImgTitleContainer a:hover img {
+    transition: transform 1s ease;
+    transform: translateX(5%);
+}
+
 
 /* TOP MENU */
 
@@ -299,12 +306,13 @@ img {
 /* Footer */
 
 #FooterContainer {
-    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
     height: var(--footer-height);
     background-color: var(--color-secondary);
+    bottom: 0;
+    position: absolute;
 }
 
 .Footer {
@@ -312,6 +320,7 @@ img {
     justify-content: space-evenly;
     width: 40%;
     height: 100%;
+    
 }
 
 .Footer p {

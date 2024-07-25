@@ -9,9 +9,11 @@ month: 3
 
 ## Sommaire
 
-
+Mon plus gros projet sur Dead Cells, le DLC Castlevania est un projet qui m'a permis de travailler sur de nombreux aspects du jeu. J'ai eu la chance de travailler sur la conception des armes, des pouvoirs, des ennemis, des boss, de la trame narrative, des lore rooms et de l'écran titre. J'ai également eu la chance de travailler sur la conception des niveaux et des biomes.
 
 ## 1. Les deux formes de Dracula / Boss final du DLC
+
+[![Dracula Forme Humaine](https://img.youtube.com/vi/oTdjV1pi-Lg/maxresdefault.jpg)](https://www.youtube-nocookie.com/embed/oTdjV1pi-Lg?si=0ZoC3oLKRn7sK2qf&mute=1&autoplay=1&start=64 "Dracula Forme Humaine")
 
 ### 1.1 Dracula forme humaine
 

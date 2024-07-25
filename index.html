@@ -6,6 +6,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" />
     <link rel="preload" href="assets/fonts/Barlow-Medium.ttf" as="font" type="font/ttf">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -18,23 +19,7 @@
 </head>
 
 <body>
-    <!-- <section class="background"></section> -->
-
-    <Header id="TopMenuContainer">
-
-        <nav id="TopMenu">
-            <a class="PreventSelect lang" href="/fr/cv.html" key="MENU_1"></a>
-            <a class="PreventSelect lang" href="#contact"key="MENU_3"></a>
-        </nav>
-        <div id="topMenuIcon"> <a target="_blank" href="https://www.linkedin.com/in/valentin-betrancourt/" class="SMListIcons">
-                <img src="/assets/img/logo/logo-linkedin.png" width="90%" class="PreventSelect"></img></a>
-            <div class="langButton" id="button_en-GB" onclick="setLanguage('en-GB')" class="SMListIcons">
-                <img src="/assets/img/logo/ukUS.png" width="100%" class="PreventSelect"></img></div>
-            <div class="langButton hide" id="button_fr-FR" onclick="setLanguage('fr-FR')" class="SMListIcons">
-                <img src="/assets/img/logo/FR.png" width="100%" class="PreventSelect"></img></div>
-        </div>
-
-    </Header>
+    <div id="menu-container"></div>
 
     <main id="ContentContainer">
         <div class="TitleContainer">
@@ -96,10 +81,12 @@
             style="border: 0; height: 1px; background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));">
 
         <div class="ImgTitleContainer">
-            <img class="PreventSelect" src="/assets/img/logo/DCLOGO (resize).png" alt="" />
+            <a href="/dc.html">
+            <img class="PreventSelect" src="/assets/img/logo/DCLOGO (resize).png" alt=""> 
+        </a>
         </div>
 
-        <div id="MC">
+        <div id="MC" >
             <ul class="picture__slider" style="transition: transform 0.5s ease-in-out 0s; transform: translateX(0px);">
 
                 <!-- ARTICLE HERE >> -->
@@ -163,19 +150,13 @@
                 <li class="MCImageContainer">
                     <div class="MCSlideContent">
                         <div class="MCSlideContentTitle">
-                            <h2 class="PreventSelect lang" key="MC_END_TITLE"> </h2>
+                            <a href="dc.html"><h2 class="PreventSelect lang AnimatedMCSlideContentTitle" key="MC_END_TITLE"> </h2></a>  
                         </div>
-                        <div class="MCSlideContentArticle">
 
-                            <a href="/fr/dc.html">
-                                <p class="lang" key="MC_END_PRES_1"> </p>
-                            </a>
-                        </div>
 
                     </div>
                     <video oncontextmenu="return false;" loop muted preload="metadata" poster="">
                         <source src="video/other.mp4" type="video/mp4">
-                        <!-- <source src="video/other.mp4" type="video/mp4"> -->
                     </video>
                 </li>
                 <!-- << -->
@@ -204,15 +185,16 @@
 
     </main>
 
-    <div id="FooterContainer">
+    <footer id="FooterContainer">
         <section class="Footer">
             <p>Made with ❤️</p>
             <a target="_blank" href="https://www.linkedin.com/in/valentin-betrancourt/" class="SMListIcons"><img
                     src="/assets/img/logo/linkedinIconColor.png" class="PreventSelect"></img></a>
         </section>
-    </div>
+    </footer>
 
     <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/carousel.js"></script>
 </body>
 
 </html>

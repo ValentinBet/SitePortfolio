@@ -11,6 +11,8 @@
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
+  position: relative;
+  min-height: 100vh;
 }
 
 /* Sections
@@ -23,6 +25,11 @@ html {
 body {
   margin: 0;
 }
+
+.hide {
+	display: none;
+}
+
 
 /**
  * Render the `main` element consistently in IE.
